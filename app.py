@@ -42,8 +42,9 @@ st.write(type((J)))'''
 if st.button("Predict"):
     # Assuming your model expects a DataFrame or specific input format
     input_data = pd.DataFrame([['A','B','C','D','E','F','G','H','I','J']], columns=['scaled','Study hours','Attendance','health','Internet Access','Region','D/H','Time',"Parent's educated",'class response'])
-    prediction = model.predict(input_data)
+    prediction = model.predict([input_data])
     st.write(f"The prediction is: {prediction[0]}")
+
 
 
 
