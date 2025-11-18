@@ -10,7 +10,7 @@ with open('model1.pkl', 'rb') as f:
         st.write(e,type(e))
 
 st.title("Student Performance Prediction System")
-'''
+
 # User input
 #feature1 = st.slider("Feature 1", 0.0, 10.0, 5.0)
 A=st.slider("scaled",300,900,1)
@@ -23,7 +23,7 @@ G=st.slider("D/H",0,1,1)
 H=st.slider("Time",5,40,1)
 I=st.slider("Parent's educated",0,1,1)
 J=st.slider("class response",0,2,1)
-
+'''
 st.write(type((A)))
 st.write(type((B)))
 st.write(type((C)))
@@ -33,7 +33,7 @@ st.write(type((F)))
 st.write(type((G)))
 st.write(type((H)))
 st.write(type((I)))
-st.write(type((J)))
+st.write(type((J)))'''
 # Preprocess input (if necessary)
 # ...
 
@@ -42,7 +42,8 @@ if st.button("Predict"):
     # Assuming your model expects a DataFrame or specific input format
     input_data = pd.DataFrame([['A','B','C','D','E','F','G','H','I','J']], columns=['scaled','Study hours','Attendance','health','Internet Access','Region','D/H','Time',"Parent's educated",'class response'])
     prediction = model.predict(input_data)
-    st.write(f"The prediction is: {prediction[0]}")'''
+    st.write(f"The prediction is: {prediction[0]}")
+
 
 
 
